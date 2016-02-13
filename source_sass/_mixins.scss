@@ -1,0 +1,13 @@
+@mixin fontSize($size) {
+    font-size: $size;
+}
+
+@mixin float-element($direction) {
+    float: $direction;
+}
+
+@mixin vertical-align() {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
