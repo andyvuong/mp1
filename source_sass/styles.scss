@@ -125,11 +125,31 @@ nav {
 
         img {
             @include wh(100px, 100px);
-            padding: 40px 0 20px 0;
+            padding: 20px 0 20px 0;
             display: block;
             margin-left: auto;
             margin-right: auto;
         }
+
+        a {
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    .col-1:hover {
+        background-color: $turq_light;
+        color: $red;
+    }
+
+    .col-2:hover {
+        background-color: $turq_light;
+        color: $red;
+    }
+
+    .col-3:hover {
+        background-color: $turq_light;
+        color: $red;
     }
 }
 
@@ -177,11 +197,10 @@ nav {
         width: 85%;
 
         hr {
+            @include border-color($turq_light);
             width: 75%;
             margin: auto;
             border-top: 2px solid $turq_light;
-            border-color: $turq_light;
-            background-color: $turq_light;
         }
 
         h2 {
@@ -200,16 +219,30 @@ nav {
     }
 }
 
-#col-1 {
+.col-1 {
     left: 0%;
 }
 
-#col-2 {
+.col-2 {
     left: 33.33%;
 }
 
-#col-3 {
+.col-3 {
     left: 66.66%;
+}
+
+.col-half-1 {
+    left: 0%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative
+}
+
+.col-half-2 {
+    left: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative
 }
 
 .social {
@@ -238,45 +271,6 @@ nav {
     border: 4px solid $green_darkest;
 }
 
-.login-modal:target {
-    opacity:1;
-    pointer-events: auto;
-}
-
-.login-modal > div {
-    @include wh(50%, 40%);
-    position: relative;
-    margin: 10% auto;
-    padding: 20px;
-    background-color: white;
-    text-align: center;
-    border: 4px solid $turq_med;
-
-    img {
-        height: 200px;
-        margin: auto;
-        padding: 20px 0 20px 0;
-    }
-
-    h2 {
-        font-family: $primary-font;
-        @include fontSize(4em);
-        text-align: center;
-    }
-
-    p {
-        font-family: $primary-font;
-        text-align: center;
-    }
-}
-
-.close {
-    color: #EB6841;
-    @include fontSize(1.5em);
-    text-decoration: none;
-    padding: 3% 0 3% 0;
-}
-
 .footer {
     @include wh(100%, 100px);
     background-color: $turq_light;
@@ -296,7 +290,7 @@ nav {
         }
 
         a {
-            color: #F0DDAA;
+            color: $pale;
             text-decoration: none;
         }
 
@@ -327,4 +321,251 @@ nav {
         margin: auto 0;
     }
 }
+
+.carousel {
+    height: 100%;
+    position:relative;
+
+    .arrow-left {
+        @include vertical-align();
+        z-index: 75;
+        position: absolute;
+        left: 0;
+        padding: 0 3% 0 2%;
+    }
+
+    .arrow-right {
+        @include vertical-align();
+        z-index: 75;
+        position: absolute;
+        right: 0;
+        padding: 0 2% 0 3%;
+    }
+
+    a {
+        color: #777;
+    }
+
+    h3 {
+        @include fontSize(1.3em);
+        padding: 5px 0 25px 0;
+    }
+
+    .slide {
+        @include vertical-align();
+        height: 85%;
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+}
+
+.reviews-cols {
+    height: 100%;
+    position: relative;
+    text-align: center;
+
+    .r-cols {
+        width: 33%;
+        background-color: white;
+        display: inline-block;
+        position: absolute;
+        padding: 0 10px 0 10px;
+    }
+
+    img {
+        height: 138px;
+        width: 166px;
+        border-radius: 50%;
+        border: 3px solid $turq_med;
+    }
+
+    .food-img {
+        margin-top: 5%;
+        height: 300px;
+        width: 350px;
+        border: 3px solid $turq_med;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h3 {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    p {
+        line-height: 130%;
+    }
+
+    hr {
+        @include border-color($turq_light);
+        width: 75%;
+        margin: auto;
+        border-top: 2px solid $turq_light;
+        margin-bottom: 10px;
+    }
+}
+
+#slide-1 {
+    overflow: hidden;
+    position: relative;
+}
+
+#slide-2 {
+    overflow: hidden;
+    position: absolute;
+    left: 2500px;
+}
+
+#slide-3 {
+    overflow: hidden;
+    position: absolute;
+    left: 5000px;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.login-modal:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.login-modal > div {
+    @include wh(50%, 40%);
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    border: 4px solid $turq_med;
+
+    img {
+        height: 165px;
+        margin: auto;
+        padding: 20px 0 20px 0;
+    }
+
+    h2 {
+        font-family: $primary-font;
+        @include fontSize(2em);
+        text-align: center;
+    }
+
+    p {
+        font-family: $primary-font;
+        text-align: center;
+    }
+}
+
+.close {
+    color: $red;
+    @include fontSize(1.5em);
+    text-decoration: none;
+    padding: 3% 0 3% 0;
+}
+
+
+.select-ch-modal:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.select-ch-modal > div {
+    @include wh(50%, 40%);
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    border: 4px solid $turq_med;
+
+    img {
+        height: 165px;
+        margin: auto;
+        padding: 20px 0 20px 0;
+    }
+
+    h2 {
+        font-family: $primary-font;
+        @include fontSize(2em);
+        text-align: center;
+    }
+
+    p {
+        font-family: $primary-font;
+        text-align: center;
+    }
+}
+
+.select-di-modal:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.select-di-modal > div {
+    @include wh(50%, 40%);
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    border: 4px solid $turq_med;
+
+    img {
+        height: 165px;
+        margin: auto;
+        padding: 20px 0 20px 0;
+    }
+
+    h2 {
+        font-family: $primary-font;
+        @include fontSize(2em);
+        text-align: center;
+    }
+
+    p {
+        font-family: $primary-font;
+        text-align: center;
+    }
+}
+
+.select-ca-modal:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.select-ca-modal > div {
+    @include wh(50%, 40%);
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    border: 4px solid $turq_med;
+
+    img {
+        height: 165px;
+        margin: auto;
+        padding: 20px 0 20px 0;
+    }
+
+    h2 {
+        font-family: $primary-font;
+        @include fontSize(2em);
+        text-align: center;
+    }
+
+    p {
+        font-family: $primary-font;
+        text-align: center;
+    }
+}
+
 

@@ -11,19 +11,18 @@
     <body>
         <nav id="nav" class="nav-large">
             <ul>
-                <li><a id="home-link" class="active" href="">Home</a></li>
-                <li><a id="how-link" href="">How it Works</a></li>
-                <li><a id="expert-link" href="">Reviews</a></li>
-                <li><a id="about-link" href="">About Us</a></li>
+                <li><a id="home-link" class="active" href="#">Home</a></li>
+                <li><a id="how-link" href="#">How it Works</a></li>
+                <li><a id="expert-link" href="#">Reviews</a></li>
                 
-                <li class="social"><a href=""><i class="fa fa-rebel"></i></a></li><!-- Don't click, it's a trap -->
-                <li class="social"><a href=""><i class="fa fa-weibo"></i></a></li>
-                <li class="social"><a href=""><i class="fa fa-twitter"></i></a></li>
-                <li class="social"><a href=""><i class="fa fa-facebook"></i></a></li>
+                <li class="social"><a href="#"><i class="fa fa-rebel"></i></a></li><!-- Don't click, it's a trap -->
+                <li class="social"><a href="#"><i class="fa fa-weibo"></i></a></li>
+                <li class="social"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li class="social"><a href="#"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#log-modal">Log In</a></li>
             </ul>
         </nav>
-        <!-- MODAL -->
+        <!-- MODALS -->
         <div id="log-modal" class="login-modal">
             <div>
                 <a href="#close" title="Close" class="close"><i class="fa fa-times-circle-o fa-2x"></i></a>
@@ -32,7 +31,28 @@
                 <p>Notice: This login form is an image.</p>
             </div>
         </div>
-        <!-- END MODAL -->
+        <div id="select-ch-modal" class="login-modal">
+            <div>
+                <a href="#close1" title="Close" class="close"><i class="fa fa-times-circle-o fa-2x"></i></a>
+                <h2>Prepare</h2>
+                <img src="./media/chef-1.png">
+            </div>
+        </div>
+        <div id="select-di-modal" class="login-modal">
+            <div>
+                <a href="#close2" title="Close" class="close"><i class="fa fa-times-circle-o fa-2x"></i></a>
+                <h2>Cook</h2>
+                <img src="./media/chef-2.png">
+            </div>
+        </div>
+        <div id="select-ca-modal" class="login-modal">
+            <div>
+                <a href="#close3" title="Close" class="close"><i class="fa fa-times-circle-o fa-2x"></i></a>
+                <h2>Serve</h2>
+                <img src="./media/fish.png">
+            </div>
+        </div>
+        <!-- END MODALS -->
         <section id="home">
             <div class="main-header">
                 <h1>Le Chef<small>Learn how to make a dinner for loved ones that's worth eating</small></h1>
@@ -62,20 +82,20 @@
                 <hr>
             </div>
             <div class="column">
-                <div id="col-1" class="col">
-                    <img src="./media/chef-3.png" alt="Chef">
+                <div class="col col-1">
+                    <a href="#select-ch-modal"><img src="./media/chef-3.png" alt="Chef"></a>
                     <hr>
                     <h2>Select a Chef</h2>
                     <p>Select a professional chef from a restaurant near you.</p>
                 </div>
-                <div id="col-2" class="col">
-                    <img src="./media/dish.png" alt="Dish">
+                <div class="col col-2">
+                    <a href="#select-di-modal"><img src="./media/dish.png" alt="Dish"></a>
                     <hr>
                     <h2>Choose a Lesson</h2>
-                    <p>Choose from a series of lessons that have be personally prepared by the chefs' themselves.</p>
+                    <p>Choose from a series of lessons that have been personally prepared by the chefs' themselves.</p>
                 </div>
-                <div id="col-3" class="col">
-                    <img src="./media/calendar.png" alt="Calendar">
+                <div class="col col-3">
+                    <a href="#select-ca-modal"><img src="./media/calendar.png" alt="Calendar"></a>
                     <hr>
                     <h2>Schedule a Day</h2>
                     <p>Schedule a day that works for both yourself and the chef using an online calendar.</p>
@@ -85,25 +105,64 @@
         <section id="experts">
             <div class="fixed"></div>
             <div class="reviews">
-                
-
-
+                <div class="carousel">
+                    <div id="car-left" class="arrow-left"><a href="#"><i class="fa fa-chevron-left fa-4x"></a></i></div>
+                    <div id="car-right" class="arrow-right"><a href="#"><i class="fa fa-chevron-right fa-4x"></a></i></div>
+                    <div id="slide-1" class="slide act">
+                        <h3>What our members have to say about us</h3>
+                        <div class="reviews-cols">
+                            <div class="r-cols col-1">
+                                <img src="./media/guy.png">
+                                <p>Gal</p>
+                                <hr>
+                                <p>Cooking is like snow skiing. If you don't fall at least 10 times, then you're not skiing hard enough. No matter how hard I cooked, I always seemed to fall. When I signed up for this service, it changed all of that. I was paired with a mentor from the famous Burgr, which is down the street from me! I've learned so much and now I can make food that my family loves to eat!</p>
+                            </div>
+                            <div class="r-cols col-2">
+                                <img src="./media/betty.png">
+                                <p>Beth</p>
+                                <hr>
+                                <p>The chef who came to my home was so patient with me! Clearly, Le Chef has a great network of professional members and it makes me proud to be part of that community! I'd recommend this to anyone wanting to make a five-star meal.</p>
+                            </div>
+                            <div class="r-cols col-3">
+                                <img src="./media/gordan.png">
+                                <p>Gordo</p>
+                                <hr>
+                                <p>Un-***king believable!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="slide-2" class="slide hidden">
+                        <div class="reviews-cols">
+                            <div class="r-cols col-half-1">
+                                <img class="food-img" src="./media/dish-1.png">
+    
+                            </div>
+                            <div class="r-cols col-half-2">
+                                <img class="food-img" src="./media/dish-2.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="slide-3" class="slide hidden">
+                        <div class="reviews-cols">
+                          <div class="r-cols col-half-1">
+                                <img class="food-img" src="./media/dish-3.png">
+    
+                            </div>
+                            <div class="r-cols col-half-2">
+                                <img class="food-img" src="./media/dish-4.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section>
-            <!--
-                Review Carousel
-
-                http://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/
-                http://www.w3schools.com/css/
-
-            -->
             <div class="footer">
                 <ul>
-                    <li><a href="">FAQ</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">Career</a></li>
-                    <li><a href="">Terms and Conditions</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
                     <li><a>&copy; LeChefCompany</a></li>
                 </ul>
             </div>
