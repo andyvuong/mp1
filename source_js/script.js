@@ -5,31 +5,31 @@ $(document).ready(function (){
     */
     $("#home-link").click(function(e) {
         e.preventDefault();
-        $('html, body').animate({
-            scrollTop: $("#home").offset().top
-        }, 500);
+        scroll($("#home"));
     });
 
     $("#how-link").click(function(e) {
         e.preventDefault();
-        $('html, body').animate({
-            scrollTop: $("#how-works").offset().top
-        }, 500);
+        scroll($("#how-works"));
     });
 
     $("#expert-link").click(function(e) {
         e.preventDefault();
-        $('html, body').animate({
-            scrollTop: $("#experts").offset().top
-        }, 500);
+        scroll($("#experts"));
     });
 
     $("#about-link").click(function(e) {
         e.preventDefault();
-        $('html, body').animate({
-            scrollTop: $(".footer").offset().top
-        }, 500);
+        scroll($(".footer"));
     });
+
+    
+    // Scroll to a location (div)
+    function scroll(location) {
+        $('html, body').animate({
+            scrollTop: location.offset().top
+        }, 500);
+    }
 
     /*
     * Detects where to top of the scroll bar is and resizes the nav bar based on that
@@ -74,7 +74,8 @@ $(document).ready(function (){
     }
 
     /*
-    * Handles the carousel update
+    * Handles the carousel update by shifting divs with content off and onto the screen. The divs are
+    * not displayed and take up no space once off screen. Handles roght arrow.
     */
     $("#car-right").click(function(e) {
         e.preventDefault();
@@ -100,7 +101,10 @@ $(document).ready(function (){
         }
     });
 
-    // go left
+    /*
+    * Handles the carousel update by shifting divs with content off and onto the screen. The divs are
+    * not displayed and take up no space once off screen. Handles left arrow.
+    */
     $("#car-left").click(function(e) {
         e.preventDefault();
         var slide1 = $("#slide-1");

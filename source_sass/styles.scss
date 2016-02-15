@@ -81,6 +81,7 @@ nav {
     position: relative;
     z-index: 50;
     background-color: white;
+    text-align: center;
 
     h1 {
         @include fontSize(4em);
@@ -89,7 +90,7 @@ nav {
         small {
             @include fontSize(0.6em);
             font-family: $pretty-front-1;
-            padding-left: 5%;
+            padding-left: 3%;
         }
     }
 }
