@@ -1,3 +1,7 @@
+# Notes:
+Modals are in the second section where the 3 column images are. The background should highlight.
+
+
 # Starter files for MP1
 Use the following commands in your vagrant development environment to get this up and running
 ```bash
@@ -18,3 +22,5 @@ For MP1, you should edit the following:
 - `public/media` - all your media files (images, videos, GIFs etc. ) go here. Use relative path to access these from your HTML files.
 
 **Do not edit anything under the `public\css` and `public\js` folders.** All things there are auto-generated and any changes you make there will get overwritten by Grunt.
+
+
