@@ -1,6 +1,6 @@
 # Notes:
-Modals are in the second section where the 3 column images are. The background should highlight.
-
+Modals are in the second section where the 3 column images are. The background should highlight. Click on
+the icons to open the modal!
 
 # Starter files for MP1
 Use the following commands in your vagrant development environment to get this up and running
